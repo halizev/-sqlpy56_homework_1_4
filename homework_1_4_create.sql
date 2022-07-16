@@ -45,16 +45,3 @@ CREATE TABLE IF NOT EXISTS genre_singer (
     genre_id INTEGER NOT NULL REFERENCES genre(id),
     singer_id INTEGER NOT NULL REFERENCES singer(id)
 );
-
--- Aii. Caaaiea
-CREATE TABLE IF NOT EXISTS department (
-    id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS staff (
-    id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,
-    department_id INTEGER REFERENCES department(id),
-    chief_id INTEGER REFERENCES staff(id)
-);
